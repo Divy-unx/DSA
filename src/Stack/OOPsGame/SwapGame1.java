@@ -11,10 +11,12 @@ public class SwapGame1 {
     }
 
     public static void swap1(Person prsn1, Person prsn2){
+        prsn1 = new Person();
         int age = prsn1.age;
         prsn1.age = prsn2.age;
         prsn2.age = age;
 
+        prsn2 = new Person();
         String name = prsn1.name;
         prsn1.name = prsn2.name;
         prsn2.name = name;

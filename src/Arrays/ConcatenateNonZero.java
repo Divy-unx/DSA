@@ -6,6 +6,9 @@ public class ConcatenateNonZero {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number 0 <= n <= 10**40");
         int num = sc.nextInt();
+        if(num == 0){
+            System.out.println(0);
+        }
         StringBuilder sb = new StringBuilder();
         String str = String.valueOf(Math.abs(num));
         int sum = 0;

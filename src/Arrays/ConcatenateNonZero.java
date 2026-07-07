@@ -9,20 +9,26 @@ public class ConcatenateNonZero {
         if(num == 0){
             System.out.println(0);
         }
-        StringBuilder sb = new StringBuilder();
-        String str = String.valueOf(Math.abs(num));
-        int sum = 0;
-        for(int i = 0; i < str.length(); i++){
-            char ch = str.charAt(i);
-            if(ch != '0'){
-                sb.append(ch);
-                sum = sum + (ch - '0');
+        try{
+            StringBuilder sb = new StringBuilder();
+            String str = String.valueOf(Math.abs(num));
+            int sum = 0;
+            for(int i = 0; i < str.length(); i++){
+                char ch = str.charAt(i);
+                if(ch != '0'){
+                    sb.append(ch);
+                    sum = sum + (ch - '0');
+                }
             }
+            long val = Long.parseLong(sb.toString());
+            System.out.println(sb);
+            System.out.println(sum);
+            System.out.println(val * sum);
+
+        }catch(Exception e){
+            System.out.println(e);
+
         }
-        long val = Long.parseLong(sb.toString());
-        System.out.println(sb);
-        System.out.println(sum);
-        System.out.println(val * sum);
 
     }
 }

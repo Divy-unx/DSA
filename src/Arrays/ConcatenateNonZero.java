@@ -1,4 +1,5 @@
 package Arrays;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ConcatenateNonZero {
@@ -26,8 +27,7 @@ public class ConcatenateNonZero {
             System.out.println(val * sum);
 
         }catch(Exception e){
-            System.out.println(e);
-
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
 
     }

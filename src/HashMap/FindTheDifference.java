@@ -22,7 +22,6 @@ public class FindTheDifference {
         Scanner scanner = new Scanner(System.in);
         String str1 = scanner.nextLine();
         String str2 = scanner.nextLine();
-
         System.out.println(Difference(str1, str2));
 
     }

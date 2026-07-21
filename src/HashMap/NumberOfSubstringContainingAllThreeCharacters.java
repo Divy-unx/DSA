@@ -4,6 +4,25 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class NumberOfSubstringContainingAllThreeCharacters {
+    public static int NumberOfSubstring(String s){
+        int n = s.length();
+        int left  = 0;
+        int[] freq = new int[3];
+        int count = 0;
+
+        for(int right = 0; right < n; right++){
+           freq[s.charAt(right) - 'a']++;
+
+           while(freq[0] > 0 && freq[1] > 0 && freq[2] > 0){
+               count = count + n - right;
+
+               freq[s.charAt(left) - 'a']--;
+               left++;
+           }
+        }
+
+        return count;
+    }
     public static int Substring(String s){
         int n = s.length();
         int count = 0;
@@ -23,5 +42,6 @@ public class NumberOfSubstringContainingAllThreeCharacters {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
         System.out.println(Substring(s));
+        System.out.println(NumberOfSubstring(s));
     }
 }

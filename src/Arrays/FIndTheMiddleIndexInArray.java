@@ -8,7 +8,7 @@ public class FIndTheMiddleIndexInArray {
             int leftSum = 0;
             int rightSum = 0;
 
-            int left = i - 1;
+            int left = i-1;
             while(left >= 0){
                 leftSum += nums[left];
                 left--;

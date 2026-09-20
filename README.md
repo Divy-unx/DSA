@@ -1,23 +1,22 @@
 # DSA Practice in Java
 
-A Java-based repository for practicing data structures and algorithms through small, focused problem implementations. The goal is to keep each exercise self-contained, easy to read, and quick to run without introducing a full app framework or build system.
+A Java-based repository for practicing data structures and algorithms through compact, focused problem implementations. The goal is to keep each exercise easy to read, independently runnable, and useful for interview preparation or daily coding practice.
 
 ## Why this repository?
 
-This project is designed for:
+This project is designed to help with:
 
-- interview and coding-practice preparation
+- interview preparation and coding drills
 - learning common DSA patterns in Java
-- reviewing problems by topic in a clean folder layout
-- running single problem files independently from the command line
+- revisiting concepts by topic and problem type
+- running one file at a time without a heavy project setup
 
-It follows a classic coding-practice structure: one problem or pattern per class, with topics grouped under `src/` by category.
+Each folder under `src/` groups related problems by concept, making it easy to study a topic in isolation and move quickly from theory to implementation.
 
-## Repository overview
+## Repository structure
 
 ```text
 DSA/
-├── .codex/
 ├── .git/
 ├── .gitignore
 ├── .idea/
@@ -25,66 +24,70 @@ DSA/
 ├── Arrays.iml
 ├── README.md
 ├── out/
-└── src/
-    ├── ArrayList/
-    ├── Arrays/
-    ├── Arrays2D/
-    ├── Backtracking/
-    ├── DP/
-    ├── HashMap/
-    ├── LinkedList/
-    ├── Maths/
-    ├── PrefixSum/
-    ├── SlidingWindow/
-    ├── Sorting/
-    ├── Stack/
-    ├── String/
-    ├── TwoPointersAndSlidingWindow/
-    ├── Main.java
-    └── Palindrome.java
+├── src/
+│   ├── ArrayList/
+│   ├── Arrays/
+│   ├── Arrays2D/
+│   ├── Backtracking/
+│   ├── DP/
+│   ├── Greedy/
+│   ├── HashMap/
+│   ├── LinkedList/
+│   ├── Maths/
+│   ├── PrefixSum/
+│   ├── Recursion/
+│   ├── SlidingWindow/
+│   ├── Sorting/
+│   ├── Stack/
+│   ├── String/
+│   ├── TwoPointersAndSlidingWindow/
+│   ├── Main.java
+│   └── ...
+└──
 ```
 
 ## Topic coverage
 
-The codebase is organized by algorithm category under `src/`:
+The repository currently includes exercises across the following categories:
 
-- `ArrayList/` — list-based exercises and common list operations
-- `Arrays/` — array fundamentals, searching, sorting-adjacent problems, and patterns
-- `Arrays2D/` — 2D matrix traversal, transformation, and grid problems
-- `Backtracking/` — recursion and exhaustive-search style problems
-- `DP/` — dynamic programming problems such as stock profit and optimization tasks
-- `HashMap/` — frequency, duplicates, lookup, and substring-related logic
-- `LinkedList/` — singly linked list patterns and examples
-- `Maths/` — number theory, prime checks, and math-based exercises
-- `PrefixSum/` — cumulative sum techniques for subarray problems
-- `SlidingWindow/` — window-based optimization techniques
-- `Sorting/` — sorting algorithms and comparison-based examples
-- `Stack/` — stack operations, bracket validation, calculator parsing, and adapter patterns
-- `String/` — string manipulation, transformation, and compression problems
-- `TwoPointersAndSlidingWindow/` — two-pointer and sliding-window techniques
+- `ArrayList/` — list operations and list-based problem patterns
+- `Arrays/` — fundamentals, counting, searching, and problem-solving patterns
+- `Arrays2D/` — matrix traversal and 2D array techniques
+- `Backtracking/` — recursion + exhaustive search problems
+- `DP/` — dynamic programming and optimization problems
+- `Greedy/` — greedy-choice based solutions
+- `HashMap/` — frequency counting, lookups, and hash-based logic
+- `LinkedList/` — singly linked list patterns and pointer manipulation
+- `Maths/` — arithmetic, number theory, and prime-based logic
+- `PrefixSum/` — cumulative-sum techniques for subarray queries
+- `Recursion/` — recursive problem solving and decomposition
+- `SlidingWindow/` — fixed and variable window optimization strategies
+- `Sorting/` — sorting algorithms and comparison-based tasks
+- `Stack/` — stack operations, parsing, validation, and stack patterns
+- `String/` — transformations, palindromes, parsing, and substring logic
+- `TwoPointersAndSlidingWindow/` — classic two-pointer and sliding-window techniques
 
-## Code style and structure
+## What a typical exercise looks like
 
-Most files follow a consistent practice pattern:
+Most files follow a simple pattern:
 
-- each Java file usually solves one focused problem
-- classes are often named after the concept or challenge
-- input is commonly read with `Scanner`
-- output is usually produced with `System.out.println(...)`
-- examples are designed to be compiled and run independently
+- one focused problem or concept per class
+- descriptive naming or topic-based naming
+- direct console input/output using `Scanner` or command-line args
+- independent compilation and execution
 
-This makes the repository useful as a personal “cheat sheet” for repetition and review, especially when preparing for technical interviews.
+This keeps the repository useful as a quick reference and review tool, especially when preparing for interviews or practicing problem-solving under time pressure.
 
 ## Prerequisites
 
-Use a Java JDK 21 or newer. Some exercises in this repository rely on modern Java features and should not be run with the default Java 8 runtime on many systems.
+Use a Java JDK 21 or newer. Some exercises rely on modern Java features, so older Java runtimes may not be sufficient.
 
 ```bash
 java -version
 javac -version
 ```
 
-If the output shows Java 8, set `JAVA_HOME` to a JDK 21+ install before compiling and running the files.
+If Java 8 is reported, install and point `JAVA_HOME` to a JDK 21+ environment before compiling.
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
@@ -93,7 +96,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 ## Quick start
 
-### Compile and run a single file
+### Compile and run a single exercise
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
@@ -103,7 +106,7 @@ javac -d out src/Arrays/TwoSum.java
 java -cp out Arrays.TwoSum
 ```
 
-### Run the root demo
+### Run the root demo file
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
@@ -113,30 +116,29 @@ javac -d out src/Main.java
 java -cp out Main hello world
 ```
 
-### Compile a specific exercise from a package
-
-Most files in this repository are organized under package folders such as `Arrays`, `HashMap`, or `Stack`.
+### Compile any Java file directly
 
 ```bash
-javac -d out src/Arrays/TwoSum.java
-java -cp out Arrays.TwoSum
+javac -d out src/Stack/ValidParentheses.java
+java -cp out Stack.ValidParentheses
 ```
 
-Note: this repository is a collection of standalone practice files, not a single application. Because some files use preview-style Java syntax while others use normal package-based classes, it is usually best to compile one file at a time rather than the whole `src/` tree.
+> Note: this repo is built as a collection of standalone practice files, not a single production application. The most reliable workflow is to compile and run one file at a time.
 
-## Suggested workflow
+## Recommended workflow
 
-1. Pick a topic folder relevant to the concept you want to practice.
-2. Open a single Java file and study the algorithm.
-3. Compile and run it directly from the terminal.
-4. Reuse the pattern elsewhere as a reference for similar interview problems.
+1. Pick a topic matching the pattern you want to practice.
+2. Open a single Java file and study the approach.
+3. Compile and run it with the provided command.
+4. Reuse the pattern as a reference for similar problems.
+5. Repeat the practice until the logic feels natural.
 
 ## Notes
 
-- This repository is learning-focused and does not aim to be a production application.
-- The `out/` directory contains generated compiled classes and is not meant for manual editing.
-- `.gitignore` keeps IDE and build artifacts such as `out/` and `.idea/` out of version control.
-- Some class names are intentionally duplicated across packages, which is valid Java because packages separate them.
+- `out/` contains generated compiled artifacts and should not be edited manually.
+- `.gitignore` ignores IDE and build output such as `out/` and `.idea/`.
+- Some class names may be reused across packages; Java treats them as separate classes because they live in different packages.
+- This repository is intentionally learning-focused rather than framework-driven.
 
 ## Author
 

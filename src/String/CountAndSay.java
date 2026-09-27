@@ -15,9 +15,8 @@ public class CountAndSay {
         if(n==1){
             return "1";
         }
-
-        StringBuilder result = new StringBuilder();
         String say = countAndSay(n-1);
+        StringBuilder result = new StringBuilder();
         for(int i = 0; i < say.length(); i++){
             char ch = say.charAt(i);
 

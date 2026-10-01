@@ -40,7 +40,7 @@ DSA/
 │   ├── Sorting/
 │   ├── Stack/
 │   ├── String/
-│   ├── TwoPointersAndSlidingWindow/
+│   ├── TwoPointers/
 │   ├── Main.java
 │   └── ...
 └──

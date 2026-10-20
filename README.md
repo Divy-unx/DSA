@@ -1,17 +1,17 @@
 # DSA Practice in Java
 
-A Java-based repository for practicing data structures and algorithms through compact, focused problem implementations. The goal is to keep each exercise easy to read, independently runnable, and useful for interview preparation or daily coding practice.
+A focused Java repository for solving data structures and algorithm problems in a clean, readable, and repeatable way. The goal is to practice interview-style questions without the overhead of a full application framework or build system.
 
-## Why this repository?
+## Overview
 
-This project is designed to help with:
+This repository is designed for:
 
-- interview preparation and coding drills
+- interview preparation
+- daily coding practice
 - learning common DSA patterns in Java
-- revisiting concepts by topic and problem type
-- running one file at a time without a heavy project setup
+- revisiting problems by topic without distractions
 
-Each folder under `src/` groups related problems by concept, making it easy to study a topic in isolation and move quickly from theory to implementation.
+Each file is typically a self-contained solution and is organized by category under `src/`.
 
 ## Repository structure
 
@@ -40,54 +40,54 @@ DSA/
 │   ├── Sorting/
 │   ├── Stack/
 │   ├── String/
-│   ├── TwoPointers/
+│   ├── TwoPointersAndSlidingWindow/
 │   ├── Main.java
 │   └── ...
 └──
 ```
 
-## Topic coverage
+## Topics covered
 
-The repository currently includes exercises across the following categories:
+The project includes exercises in:
 
-- `ArrayList/` — list operations and list-based problem patterns
-- `Arrays/` — fundamentals, counting, searching, and problem-solving patterns
-- `Arrays2D/` — matrix traversal and 2D array techniques
-- `Backtracking/` — recursion + exhaustive search problems
-- `DP/` — dynamic programming and optimization problems
-- `Greedy/` — greedy-choice based solutions
-- `HashMap/` — frequency counting, lookups, and hash-based logic
-- `LinkedList/` — singly linked list patterns and pointer manipulation
-- `Maths/` — arithmetic, number theory, and prime-based logic
-- `PrefixSum/` — cumulative-sum techniques for subarray queries
-- `Recursion/` — recursive problem solving and decomposition
-- `SlidingWindow/` — fixed and variable window optimization strategies
-- `Sorting/` — sorting algorithms and comparison-based tasks
-- `Stack/` — stack operations, parsing, validation, and stack patterns
-- `String/` — transformations, palindromes, parsing, and substring logic
-- `TwoPointersAndSlidingWindow/` — classic two-pointer and sliding-window techniques
+- `ArrayList/` — list operations and list-based patterns
+- `Arrays/` — fundamentals, searching, counting, and common array problems
+- `Arrays2D/` — matrix traversal and grid-based problems
+- `Backtracking/` — recursive search and exhaustive enumeration
+- `DP/` — dynamic programming and optimization techniques
+- `Greedy/` — local-choice optimization problems
+- `HashMap/` — map-based frequency and lookup patterns
+- `LinkedList/` — linked-list manipulation and traversal
+- `Maths/` — arithmetic, number theory, and math-driven tasks
+- `PrefixSum/` — prefix-sum and cumulative techniques
+- `Recursion/` — recursive decomposition and problem solving
+- `SlidingWindow/` — fixed and variable window optimization
+- `Sorting/` — sorting algorithms and comparison logic
+- `Stack/` — parsing, validation, and stack-based solutions
+- `String/` — string manipulation and pattern matching
+- `TwoPointersAndSlidingWindow/` — two-pointer and sliding-window styles
 
-## What a typical exercise looks like
+## Typical problem structure
 
-Most files follow a simple pattern:
+Most files follow a simple style:
 
 - one focused problem or concept per class
-- descriptive naming or topic-based naming
-- direct console input/output using `Scanner` or command-line args
-- independent compilation and execution
+- direct console input/output
+- compile and run independently
+- minimal dependencies and no framework setup
 
-This keeps the repository useful as a quick reference and review tool, especially when preparing for interviews or practicing problem-solving under time pressure.
+This makes the repo a strong personal reference for reviewing patterns and sharpening coding logic.
 
 ## Prerequisites
 
-Use a Java JDK 21 or newer. Some exercises rely on modern Java features, so older Java runtimes may not be sufficient.
+Use Java 21 or newer.
 
 ```bash
 java -version
 javac -version
 ```
 
-If Java 8 is reported, install and point `JAVA_HOME` to a JDK 21+ environment before compiling.
+If your environment still points to Java 8, configure a newer JDK before compiling:
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
@@ -96,7 +96,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 ## Quick start
 
-### Compile and run a single exercise
+### Compile and run a single file
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
@@ -106,7 +106,7 @@ javac -d out src/Arrays/TwoSum.java
 java -cp out Arrays.TwoSum
 ```
 
-### Run the root demo file
+### Run the root demo
 
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
@@ -116,29 +116,29 @@ javac -d out src/Main.java
 java -cp out Main hello world
 ```
 
-### Compile any Java file directly
+### Compile any Java class directly
 
 ```bash
 javac -d out src/Stack/ValidParentheses.java
 java -cp out Stack.ValidParentheses
 ```
 
-> Note: this repo is built as a collection of standalone practice files, not a single production application. The most reliable workflow is to compile and run one file at a time.
+> This repository is intentionally built as a collection of standalone practice files, not as a single app. The recommended workflow is to compile and run one file at a time.
 
-## Recommended workflow
+## Suggested workflow
 
-1. Pick a topic matching the pattern you want to practice.
-2. Open a single Java file and study the approach.
-3. Compile and run it with the provided command.
-4. Reuse the pattern as a reference for similar problems.
-5. Repeat the practice until the logic feels natural.
+1. Choose a topic folder related to the concept you want to practice.
+2. Open a single Java file and understand the approach.
+3. Compile and run it locally.
+4. Reuse the logic as a pattern for similar problems.
+5. Repeat until the solution becomes instinctive.
 
 ## Notes
 
-- `out/` contains generated compiled artifacts and should not be edited manually.
-- `.gitignore` ignores IDE and build output such as `out/` and `.idea/`.
-- Some class names may be reused across packages; Java treats them as separate classes because they live in different packages.
-- This repository is intentionally learning-focused rather than framework-driven.
+- `out/` contains generated compiled class files and should not be edited manually.
+- `.gitignore` excludes IDE and build artifacts such as `out/` and `.idea/`.
+- Some class names may repeat across packages; Java treats them as separate classes because they are in different package namespaces.
+- The project is focused on learning and practice, not production architecture.
 
 ## Author
 

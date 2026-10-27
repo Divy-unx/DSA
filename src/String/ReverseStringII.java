@@ -1,0 +1,35 @@
+package String;
+
+import java.util.Scanner;
+
+public class ReverseStringII {
+
+    public static void reverse(char[] arr, int i, int j){
+        while(i < j){
+            char temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+    }
+    public static String reverseStr(String s, int k) {
+        char[] arr = s.toCharArray();
+        int i = 0;
+        int n = s.length();
+        while(i < n){
+            int j = Math.min(i+k-1,n-1);
+            reverse(arr, i,i + k - 1);
+            i = i + 2 * k;
+        }
+
+        return new String(arr);
+    }
+    static void main() {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int idx = sc.nextInt();
+
+        System.out.println(reverseStr(s,idx));
+    }
+}
